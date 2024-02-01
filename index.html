@@ -19,12 +19,25 @@
 </body>
 <script type="text/babel">
 const Main = () =>{
+    let name = 'nay zaw aung';
+    let num = 15;
+    let className = "my-class";
+
+    let clickHandler = (e) => {
+        //alert('click me');
+        console.log(e)
+    }
     return (
         //this is main section
-        <div className="text-class">
-            Hello , this is main container
-            <span>hi there</span>
+        <div className={className}>
+           <h3>{ name.toUpperCase() }</h3>
+           <h6>{num}</h6>
+           <p>{new Date().toDateString()}</p>
+           <button onClick={clickHandler}>click me</button> 
+        
         </div>
+
+        //add function reference into events
         );
 }
 let rootContainer = document.getElementById('main');
