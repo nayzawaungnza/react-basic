@@ -1,8 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import image from './assets/recent-project-1.png';
-
+import { useState } from 'react';
 function App() {
+
+  let [name, setName] = useState("Nay Zaw Aung");
+  let changeName = () =>{
+    setName('Aung Aung');
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,12 +22,12 @@ function App() {
 
       {/* 2 nd way */}
 
-      <img src={image} />
+      {/* <img src={image} /> */}
 
         <p>
-          Hello World
+          Hello {name}
         </p>
-        
+        <button onClick={changeName}>Change Name</button>
       </header>
  
     </div>
