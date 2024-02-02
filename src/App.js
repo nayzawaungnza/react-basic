@@ -48,12 +48,13 @@ function App() {
         <button onClick={changeName}>Change Name</button>
 
         <ul>
-          {posts.map((post)=>(
+          {!!posts.length && posts.map((post)=>(// !! is get bollean value
             <li key={post.id}>
               {post.title}
               <button onClick={() => deletePost(post.id)}>delete</button>
             </li>
           ))}
+          {!posts.length && <p>No posts available.</p>}
         </ul>
       </header>
  
