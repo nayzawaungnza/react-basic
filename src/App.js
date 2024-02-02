@@ -23,6 +23,10 @@ function App() {
     setName('Aung Aung');
   }
 
+  let deletePost = (id) => {
+    setPosts((prevPost)=>prevPost.filter(post => post.id != id))
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -45,7 +49,10 @@ function App() {
 
         <ul>
           {posts.map((post)=>(
-            <li key={post.id}>{post.title}</li>
+            <li key={post.id}>
+              {post.title}
+              <button onClick={() => deletePost(post.id)}>delete</button>
+            </li>
           ))}
         </ul>
       </header>
