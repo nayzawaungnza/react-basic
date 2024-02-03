@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.css';
-export default function Navbar() {
+export default function Navbar({setshowModal}) {
   return (
     <nav>
       
@@ -9,6 +9,8 @@ export default function Navbar() {
         <ul>
           <li>Home</li>
           <li>Posts</li>
+          <li onClick={()=>setshowModal(true)}>Sign In</li>
+          {/* that used function reference */}
         </ul>
       </div>
     </nav>
