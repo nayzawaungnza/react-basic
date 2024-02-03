@@ -1,14 +1,6 @@
 nav.nav-components{
-    background-color: yellow;
+    background-color: gray;
     padding: 10px;
-}
-.nav-components .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin:auto;
-
 }
 .nav-components .container ul{
     display: flex;

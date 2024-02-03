@@ -18,3 +18,9 @@
 .modal-components .modal h1{
     margin:20px;
 }
+.modal-components .border-red {
+border: 2px solid red;
+}
+.modal-components .border-blue{
+    border: 2px solid blue;
+}
