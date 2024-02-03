@@ -2,9 +2,9 @@ import React from 'react'
 import './index.css';
 export default function Navbar({setshowModal}) {
   return (
-    <nav>
+    <nav className='nav-components'>
       
-      <div className='container'>
+      <div className='container modal'>
       <h1>Logo</h1>
         <ul>
           <li>Home</li>

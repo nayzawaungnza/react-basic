@@ -1,8 +1,8 @@
-nav{
+nav.nav-components{
     background-color: yellow;
     padding: 10px;
 }
-.container{
+.nav-components .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,10 +10,10 @@ nav{
     margin:auto;
 
 }
-.container ul{
+.nav-components .container ul{
     display: flex;
 }
-.container ul li{
+.nav-components .container ul li{
     list-style-type: none;
     margin: 0 20px;
 }
