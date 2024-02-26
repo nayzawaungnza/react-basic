@@ -14,10 +14,12 @@ function App() {
     {
       id:1, 
       title:'First Post',
+      status:'dropped',
     },
     {
       id:2, 
       title:'Second Post',
+      status:'ongoing',
     },
     // {
     //   id:3, 
