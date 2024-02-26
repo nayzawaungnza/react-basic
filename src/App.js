@@ -4,6 +4,7 @@ import image from './assets/recent-project-1.png';
 import { useState } from 'react';
 import Navbar from './components/Navbar/index';
 import PostList from './components/PostsList/index';
+import PostForm from './components/PostForm/index'
 import Modal from './components/Modal/index'
 function App() {
 
@@ -28,11 +29,10 @@ function App() {
     <>
       <Navbar setshowModal={setshowModal}/>
       <PostList posts={posts}/>
-      {showModal && <Modal danger>
+      {showModal && <Modal danger setshowModal={setshowModal}>
         {/* that is call slot */}
-            <h1>Zoom Class is available now</h1>
-            <p>feel free to <a href="">Join</a> here</p>
-            <button onClick={()=>setshowModal(false)}>close</button>
+            <PostForm></PostForm>
+            
       </Modal>}
     </>
     

@@ -1,0 +1,21 @@
+.post-form-components .form-control{
+margin: 20px;
+}
+.post-form-components label{
+margin-left: 10px;
+}
+
+.post-form-components  input{
+    border: 1px solid gray;
+    padding: 5px;
+    width: 80%;
+    border-radius: 10px;
+}
+.post-form-components button{
+    border: 1px solid gray;
+    background-color: rgb(168, 33, 159);
+    border-radius: 5px;
+    padding: 10px 5px;
+    color: white;
+    
+}
