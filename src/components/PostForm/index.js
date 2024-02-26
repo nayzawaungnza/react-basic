@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './index.css';
-export default function PostForm() {
+export default function PostForm({addPost}) {
   let [title, setTitle] = useState("");
   // let onChangeHandler = (e) =>{
   //   setTitle(e.target.value);
@@ -9,10 +9,22 @@ export default function PostForm() {
     setTitle('');
     console.log('update successfully');
   }
+  let insertPost = (e) =>{
+    e.preventDefault();
+    console.log('hi');
+
+    let post = {
+      id : Math.floor(Math.random()*10000),
+      title: title,
+    }
+    resetForm();
+    console.log(post);
+    addPost(post);
+  }
   return (
     <div className='post-form-components'>
       <h3>Create Post</h3>
-        <form className='post-form'>
+        <form className='post-form' onSubmit={insertPost}>
         <div className='form-group'>
             <label >Title</label>
             <input type="text" onChange={(e)=>{setTitle(e.target.value)}} className='form-control' value={title} />
@@ -20,7 +32,7 @@ export default function PostForm() {
             <button type='button' onClick={resetForm}>Reset Form</button>
         </div>
         <div className='form-group'>
-            <button className='form-control'>Post Now</button>
+            <button className='form-control' type='submit'>Post Now</button>
         </div>
         </form>
     </div>

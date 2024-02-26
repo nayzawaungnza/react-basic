@@ -1,8 +1,8 @@
 import React from 'react'
 import './index.css'
 import  ReactDOM  from 'react-dom'
-export default function Modal({children, danger=true, setshowModal}) {
-  let className = danger ? 'border-red-a' : 'border-blue';
+export default function Modal({children, danger=false, setshowModal}) {
+  let className = danger ? 'border-red' : 'border-blue';
   return (
     ReactDOM.createPortal(
     <div className='modal-components'>

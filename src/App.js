@@ -19,19 +19,23 @@ function App() {
       id:2, 
       title:'Second Post',
     },
-    {
-      id:3, 
-      title:'Third Post',
-    }
+    // {
+    //   id:3, 
+    //   title:'Third Post',
+    // }
   ]);
  
+  let addPost = (post) =>{
+    setPosts((prevState => [...prevState, post]));
+    setshowModal(false);
+  }
   return (
     <>
       <Navbar setshowModal={setshowModal}/>
       <PostList posts={posts}/>
-      {showModal && <Modal danger setshowModal={setshowModal}>
+      {showModal && <Modal setshowModal={setshowModal}>
         {/* that is call slot */}
-            <PostForm></PostForm>
+            <PostForm addPost={addPost}></PostForm>
             
       </Modal>}
     </>
